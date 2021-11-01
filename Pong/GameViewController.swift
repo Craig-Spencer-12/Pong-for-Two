@@ -10,40 +10,41 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+//Global variables
+var gameType = true
+var difficulty = Float(0.7)
+var pauseMenu = false
 
+class GameViewController: UIViewController {
+    
+    @IBOutlet weak var returnButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
-                
-                // Present the scene
                 view.presentScene(scene)
             }
-            
             view.ignoresSiblingOrder = true
+        }
+    }
+    
+    @IBAction func returnToMenuButton(_ sender: Any) {
+        if pauseMenu {
+            let menuVC = self.storyboard?.instantiateViewController(withIdentifier: "menuVC") as! PongMenu
             
-            view.showsFPS = true
-            view.showsNodeCount = true
+            self.navigationController?.pushViewController(menuVC, animated: true)
+            
+            pauseMenu = false
         }
     }
 
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }

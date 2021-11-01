@@ -17,6 +17,7 @@
 		44A219E4229B218F009F67A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A219E2229B218F009F67A8 /* LaunchScreen.storyboard */; };
 		44A219EF229B218F009F67A8 /* PongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A219EE229B218F009F67A8 /* PongTests.swift */; };
 		44A219FA229B218F009F67A8 /* PongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A219F9229B218F009F67A8 /* PongUITests.swift */; };
+		44ED9102229C95AD00EE21BF /* PongMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44ED9101229C95AD00EE21BF /* PongMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		44A219F5229B218F009F67A8 /* PongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A219F9229B218F009F67A8 /* PongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongUITests.swift; sourceTree = "<group>"; };
 		44A219FB229B218F009F67A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44ED9101229C95AD00EE21BF /* PongMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				44A219D9229B218E009F67A8 /* GameScene.swift */,
 				44A219DB229B218E009F67A8 /* GameViewController.swift */,
 				44A219DD229B218E009F67A8 /* Main.storyboard */,
+				44ED9101229C95AD00EE21BF /* PongMenu.swift */,
 				44A219E0229B218F009F67A8 /* Assets.xcassets */,
 				44A219E2229B218F009F67A8 /* LaunchScreen.storyboard */,
 				44A219E5229B218F009F67A8 /* Info.plist */,
@@ -196,6 +199,10 @@
 		44A219C8229B218E009F67A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Craig;
@@ -269,6 +276,7 @@
 			files = (
 				44A219DA229B218E009F67A8 /* GameScene.swift in Sources */,
 				44A219DC229B218E009F67A8 /* GameViewController.swift in Sources */,
+				44ED9102229C95AD00EE21BF /* PongMenu.swift in Sources */,
 				44A219D4229B218E009F67A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CraigCompany.Pong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,7 +480,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.CraigCompany.Pong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
